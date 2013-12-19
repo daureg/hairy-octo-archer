@@ -6,49 +6,45 @@
     <script src="babylon.1.8.0.js"></script>
     <script src="Hand.js"></script>
     <style>
-        html, body, div, canvas {
-            width: 100%;
+        html, body{
             height: 100%;
             padding: 0;
             margin: 0;
             overflow: hidden;
         }
+	canvas {
+            width: 50%;
+            height: 75%;
+	    margin: 1em 25% ;
+	}
+
     </style>
 </head>
 <body>
 
-    <div id="rootDiv">
         <canvas id="renderCanvas"></canvas>
-    </div>
 
     </body>
-    <script type="text/javascript">
-
-        // Get the Canvas element from our HTML below
+<script>
+    if (BABYLON.Engine.isSupported()) {
         var canvas = document.getElementById("renderCanvas");
-
-        // Load BABYLON 3D engine and set the root directory
         var engine = new BABYLON.Engine(canvas, true);
 
-        //Create a new scene with a camera (mandatory), a light (better) and a sphere (to see the origin)
-        var scene = new BABYLON.Scene(engine);
+        BABYLON.SceneLoader.Load("", "cube.babylon", engine, function (newScene) {
+            // Wait for textures and shaders to be ready
+            newScene.executeWhenReady(function () {
+                // Attach camera to canvas inputs
+                newScene.activeCamera.attachControl(canvas);
 
-        // Creating a camera looking to the zero point (0,0,0)
-        var camera = new BABYLON.ArcRotateCamera("Camera", 1, 0.8, 10, new BABYLON.Vector3(0, 0, 0), scene);
-        // Creating a omnidirectional light
-        var light0 = new BABYLON.PointLight("Omni", new BABYLON.Vector3(0, 0, 10), scene);
-        // Creating a sphere of size 1, at 0,0,0
-        var origin = BABYLON.Mesh.CreateSphere("origin", 10, 1.0, scene);
-
-
-        // Attach the camera to the scene
-        scene.activeCamera.attachControl(canvas);
-
-
-        // Once the scene is loaded, just register a render loop to render it
-        engine.runRenderLoop(function () {
-            scene.render();
+                // Once the scene is loaded, just register a render loop to render it
+                engine.runRenderLoop(function() {
+                    newScene.render();
+                });
+            });
+        }, function (progress) {
+            // To do: give progress feedback to user
         });
-    </script>
+    }
+</script>
 </html>
 
