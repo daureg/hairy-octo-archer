@@ -48,8 +48,8 @@ body {
 }
 .lettrine-ctd {
 	/* text-transform: small-caps; */
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	-moz-font-feature-settings: 'smcp';
 	-webkit-font-feature-settings: 'smcp';
-	font-size: 0.9em;
+	/* font-size: 0.9em; */
 }
