@@ -11,15 +11,20 @@
 }
 @font-face {
     font-family: 'linux_libertine_oregular';
-    src: url('fonts/LinLibertine_R.woff') format('woff');
+    /* src: url('fonts/LinLibertine_R.woff') format('woff'); */
+    src: url('fonts/linlibertine_r-webfont.woff') format('woff');
+    /* src: url('fonts/linlibertine_r-webfont.eot'); */
+    /* src: url('fonts/linlibertine_r-webfont.eot?#iefix') format('embedded-opentype'), */
+    /*      url('fonts/linlibertine_r-webfont.woff') format('woff'), */
+    /*      url('fonts/linlibertine_r-webfont.ttf') format('truetype'), */
     font-weight: normal;
     font-style: normal;
 }
 body {
 	background: #fcfaec;
 	font-family: 'linux_libertine_oregular', 'Lora', serif;
-	color: #444;
-	font-size: 18pt;
+	color: #333;
+	font-size: 16pt;
 	line-height: 1.5;
 	text-align: justify;
 	margin: 2.5em auto;
@@ -31,12 +36,12 @@ body {
 }
 #title {
 	font-weight: 900;
-	font-size: 1.9em;
+	font-size: 1.8em;
 	margin: 0 !important;
 	font-family: 'myfontmedium', serif;
 }
 .lettrine {
-	font-size: 2.2em;
+	font-size: 2.0em;
 	font-weight: bold;
 	line-height: 0;
 	letter-spacing: -15pt;
