@@ -53,3 +53,9 @@ body {
 	-webkit-font-feature-settings: 'smcp';
 	/* font-size: 0.9em; */
 }
+p+p {
+	margin-top: -1em !important;
+}
+pre {
+    font-family:inherit;
+}
