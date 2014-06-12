@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>EMD vs JSD</title>
+        <style>
+html, body {
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f9fcf9;
+    color: #333;
+    font-size: 14pt;
+    line-height: 1.35;
+    text-align: center;
+    padding-top: .5em;
+}
+.desc {
+    color: #666;
+    font-style: italic;
+    margin-bottom: .5em;
+}
+h2 {
+    font-size: 2.3em;
+    margin: 0.2em 1.5em;
+    border-top: 1px #333 solid;
+    padding-top: .5em;
+}
+ul{
+  width:50%;
+  margin: 1em auto;
+  overflow:hidden;
+}
+a {
+	color: #1e90ff; /* Dodger Blue */
+}
+li{
+  line-height:1.5;
+  float:left;
+  display:inline;
+  width:33.333%;
+}
+#green {color: #2ecc40;}
+#red {color: #b22222;}
+#blue {color: #0074d9;}
+        </style>
+	</head>
+<body>
+<p>
+Earth's Mover Distance is in <span id="blue">blue</span>, Jenson-Shannon
+Divergence in <span id="green">green</span> and ground truth in <span
+id="red">red</span>.
+</p>
+<ul>
+<li><a href="#triangle">Golden triangle</a></li>
+<li><a href="#latin">Quartier Latin</a></li>
+<li><a href="#pigalle">Pigalle</a></li>
+<li><a href="#montmartre">Montmartre</a></li>
+<li><a href="#official">Official</a></li>
+<li><a href="#marais">Le Marais</a></li>
+</ul>
+<h2 id="triangle">Golden triangle</h2>
+<p class="desc">High end fashion shops and luxurious palaces.</p>
+<img src="triangle.png">
+<h2 id="latin">Quartier Latin</h2>
+<p class="desc">A lot of top higher education institutions and therefore plenty of students.</p>
+<img src="latin.png">
+<h2 id="pigalle">Pigalle</h2>
+<p class="desc">Red light district.</p>
+<img src="pigalle.png">
+<h2 id="montmartre">Montmartre</h2>
+<p class="desc">Touristic spot as well as artsy district.</p>
+<img src="montmartre.png">
+<h2 id="official">Official</h2>
+<p class="desc">Presidential palace, national parliament and various ministries lies here.</p>
+<img src="official.png">
+<h2 id="marais">Le Marais</h2>
+<p class="desc">It has welcomed many minorities throughout history, the last
+one being homosexuals in the 80s.</p>
+<img src="marais.png">
+</body>
+</html>
