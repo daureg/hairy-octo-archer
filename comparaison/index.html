@@ -19,6 +19,9 @@ body {
     text-align: center;
     padding-top: .5em;
 }
+img {
+	max-width: 100%;
+}
 .desc {
     color: #666;
     font-style: italic;
@@ -42,18 +45,19 @@ li{
   line-height:1.5;
   float:left;
   display:inline;
-  width:25%;
+  width:33.3333%;
 }
 #green {color: #2ecc40;}
 #red {color: #b22222;}
 #blue {color: #0074d9;}
+#orange {color: #ff851b;}
         </style>
 	</head>
 <body>
 <p>
-Earth's Mover Distance is in <span id="blue">blue</span>, Jenson-Shannon
-Divergence in <span id="green">green</span> and ground truth in <span
-id="red">red</span>.
+Earth's Mover Distance is in <span id="green">green</span>, Jenson-Shannon
+Divergence in <span id="blue">blue</span>, 3-clusters min-cost in
+<span id="orange">orange</span> and ground truth in <span id="red">red</span>.
 </p>
 <ul>
 <li><a href="#triangle">Golden triangle</a></li>
@@ -63,34 +67,67 @@ id="red">red</span>.
 <li><a href="#official">Official</a></li>
 <li><a href="#marais">Le Marais</a></li>
 <li><a href="#16th">16<sup>th</sup> arrondissement</a></li>
-<li><a href="#weekend">Nature weekend</a></li>
+<li><a href="#weekend">The banks of the Seine</a></li>
 </ul>
 <h2 id="triangle">Golden triangle</h2>
 <p class="desc">High-end fashion shops and luxurious palaces.</p>
-<img src="triangle.png">
+<img src="sf_triangle.png">
 <h2 id="latin">Quartier Latin</h2>
 <p class="desc">A lot of top higher education institutions and therefore plenty of students.</p>
-<img src="latin.png">
+<img src="sf_latin.png">
 <h2 id="pigalle">Pigalle</h2>
 <p class="desc">Red light district.</p>
-<img src="pigalle.png">
+<img src="sf_pigalle.png">
 <h2 id="montmartre">Montmartre</h2>
 <p class="desc">Touristic spot as well as artsy district.</p>
-<img src="montmartre.png">
+<img src="sf_montmartre.png">
 <h2 id="official">Official</h2>
 <p class="desc">Presidential palace, national parliament and various ministries.</p>
-<img src="official.png">
+<img src="sf_official.png">
 <h2 id="marais">Le Marais</h2>
 <p class="desc">It has welcomed many minorities throughout history, the last
 one being homosexuals in the 80s.</p>
-<img src="marais.png">
+<img src="sf_marais.png">
 <h2 id="16th">16<sup>th</sup> arrondissement</h2>
 <p class="desc">It's expensive to buy a house there.</p>
-<img src="16th.png">
+<img src="sf_16th.png">
 <h2 id="weekend">The banks of the Seine</h2>
 <p class="desc">People can relax during the weekend with friends or family,
 close to the nature.</p>
-<img src="weekend.png">
+<img src="sf_weekend.png">
+<script type="text/javascript" charset="utf-8">
+	var city = 'sf';
+	function get_new_img_name(full_src) {
+        if (full_src.search('sf_') >= 0) {
+			return full_src.replace('sf_', 'bc_');
+		}
+		else {
+			return full_src.replace('bc_', 'sf_');
+		}
+	}
+	function toggle_img() {
+		imgs = document.querySelectorAll('img');
+		for (var i = 0, l = imgs.length; i < l; i ++) {
+			imgs[i].src = get_new_img_name(imgs[i].src);
+		}
+	}
+	document.addEventListener('keydown', function(event) {
+		var new_city = null;
+		if (event.keyCode === 66) {
+			new_city = 'bc';
+		}
+		if (event.keyCode === 83) {
+			new_city = 'sf';
+		}
+        change_city(new_city);
+	});
+    function change_city(new_city) {
+		if (new_city && new_city !== city) {
+			city = new_city;
+			toggle_img();
+		}
+    }
+</script>
 </body>
 </html>
 
