@@ -97,6 +97,15 @@ close to the nature.</p>
 <img src="sf_weekend.png">
 <script type="text/javascript" charset="utf-8">
 	var city = 'sf';
+    var use_s3 = true;
+    var PREFIX = (use_s3) ? 'https://s3-eu-west-1.amazonaws.com/mthesis-survey/comparaison/' : '';
+    var imgs = document.querySelectorAll('img');
+    if (use_s3) {
+		for (var i = 0, l = imgs.length; i < l; i ++) {
+            var path = imgs[i].src.split('/');
+			imgs[i].src = PREFIX + path[path.length-1];
+		}
+    }
 	function get_new_img_name(full_src) {
         if (full_src.search('sf_') >= 0) {
 			return full_src.replace('sf_', 'bc_');
@@ -106,7 +115,6 @@ close to the nature.</p>
 		}
 	}
 	function toggle_img() {
-		imgs = document.querySelectorAll('img');
 		for (var i = 0, l = imgs.length; i < l; i ++) {
 			imgs[i].src = get_new_img_name(imgs[i].src);
 		}
