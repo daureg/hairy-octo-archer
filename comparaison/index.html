@@ -51,13 +51,17 @@ li{
 #red {color: #b22222;}
 #blue {color: #0074d9;}
 #orange {color: #ff851b;}
+#fuchsia {color: #f012be;}
+#gray {color: #888;}
         </style>
 	</head>
 <body>
 <p>
 Earth's Mover Distance is in <span id="green">green</span>, Jenson-Shannon
 Divergence in <span id="blue">blue</span>, 3-clusters min-cost in
-<span id="orange">orange</span> and ground truth in <span id="red">red</span>.
+<span id="orange">orange</span>, 80% EMD in <span
+id="fuchsia">fuchsia</span>, LMNN EMD in <span
+id="gray">gray</span> and ground truth in <span id="red">red</span>.
 </p>
 <ul>
 <li><a href="#triangle">Golden triangle</a></li>
@@ -97,7 +101,7 @@ close to the nature.</p>
 <img src="sf_weekend.png">
 <script type="text/javascript" charset="utf-8">
 	var city = 'sf';
-    var use_s3 = true;
+    var use_s3 = false;
     var PREFIX = (use_s3) ? 'https://s3-eu-west-1.amazonaws.com/mthesis-survey/comparaison/' : '';
     var imgs = document.querySelectorAll('img');
     if (use_s3) {
