@@ -49,7 +49,7 @@ var MINI = require('minified');
 var _=MINI._, $=MINI.$, $$=MINI.$$, EE=MINI.EE, HTML=MINI.HTML;
 var form = $("#choice");
 var img = $("#showit");
-var use_s3 = false;
+var use_s3 = true;
 var PREFIX = (use_s3) ? 'https://s3-eu-west-1.amazonaws.com/mthesis-survey/candidates/' : 'img/';
 function case_to_name(full_case) {
     var metric = (full_case.candidates === 'knn') ? 'jsd' : full_case.metric;
