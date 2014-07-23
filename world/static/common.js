@@ -25,9 +25,9 @@ function barycenter(points) {
 
 /* Return the LatLngBounds enclosing `bbox` */
 function compute_bound(bbox) {
-    var offset = 4;
-    var southWest = new L.LatLng(bbox[0][0] - offset, bbox[0][1] - offset);
-    var northEast = new L.LatLng(bbox[2][0] + offset, bbox[2][1] + offset);
+    var offset = 5;
+    var southWest = new L.LatLng(bbox[3][0] - offset, bbox[3][1] - offset);
+    var northEast = new L.LatLng(bbox[1][0] + offset, bbox[1][1] + offset);
     return new L.LatLngBounds(southWest, northEast);
 }
 
@@ -40,6 +40,7 @@ function create_map(div_id, bbox, extras) {
 		carto_layer = new L.Google('ROADMAP', { mapOptions: { styles: {featureType: 'all'} } });
 	}
     var bbounds = compute_bound(bbox);
+    console.log(bbounds);
     var center = new L.LatLng(0.5*(bbox[0][0]+bbox[2][0]),
                               0.5*(bbox[0][1]+bbox[2][1]));
     var options = {zoom: 4, minZoom: 3, center: center, layers:
