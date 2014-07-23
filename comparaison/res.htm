@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Metric comparison</title>
+  <style type="text/css">code{white-space: pre;}
+	  * {
+		  -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+	  }
+	  body {
+		  padding: 1.3em;
+		  background: #f8fcf8;
+		  color: #222;
+		  line-height: 1.4;
+	  }
+	  a {color: #03a9f4;}
+	  img {margin: 1.8em;}
+table{margin: 1.8em; border-collapse:collapse;}
+tr {border: none;}
+td, th {padding: 0.25rem 0.5rem;
+border-right: solid 1px #aaa; border-left: solid 1px #aaa;
+}
+.average {
+	font-style: italic;
+}
+.bcity {
+	background: #ddd;
+}
+caption {
+	margin-bottom: 0.5em;
+}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+	<h1>Metric comparison</h1>
+<table class="dataframe">
+	<caption>This table shows the average score of each metric when queries
+		are issued from the city on the left.  The best metric in each
+		city is <span class="bcity">highlighted</span> and clicking on
+		a city lead to the complete report.</caption>
+  <thead>
+    <tr>
+      <th>Query from</th>
+      <th>cluster</th>
+      <th>emd</th>
+      <th>emd-lmnn</th>
+      <th>jsd</th>
+      <th>leftover</th>
+      <th>Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	    <th><a href="#barcelona">Barcelona</a></th>
+      <td> 0.083064</td>
+      <td> 0.078173</td>
+      <td class="bcity"> 0.084204</td>
+      <td> 0.042414</td>
+      <td> 0.078244</td>
+      <td class="average"> 0.073220</td>
+    </tr>
+    <tr>
+	    <th><a href="#newyork">New York</a></th>
+      <td> 0.059200</td>
+      <td class="bcity"> 0.059385</td>
+      <td> 0.059023</td>
+      <td> 0.057180</td>
+      <td> 0.053495</td>
+      <td class="average"> 0.057656</td>
+    </tr>
+    <tr>
+	    <th><a href="#paris">Paris</a></th>
+      <td> 0.061438</td>
+      <td class="bcity"> 0.091178</td>
+      <td> 0.078614</td>
+      <td> 0.045136</td>
+      <td> 0.061940</td>
+      <td class="average"> 0.067661</td>
+    </tr>
+    <tr>
+	    <th><a href="#rome">Rome</a></th>
+      <td> 0.024313</td>
+      <td class="bcity"> 0.042352</td>
+      <td> 0.039936</td>
+      <td> 0.021156</td>
+      <td> 0.029746</td>
+      <td class="average"> 0.031501</td>
+    </tr>
+    <tr>
+	    <th><a href="#sanfrancisco">San Francisco</a></th>
+      <td class="bcity"> 0.045977</td>
+      <td> 0.045031</td>
+      <td> 0.040164</td>
+      <td> 0.033829</td>
+      <td> 0.044497</td>
+      <td class="average"> 0.041899</td>
+    </tr>
+    <tr>
+	    <th><a href="#washington">Washington</a></th>
+      <td class="bcity"> 0.043694</td>
+      <td> 0.034762</td>
+      <td> 0.038164</td>
+      <td> 0.033211</td>
+      <td> 0.038829</td>
+      <td class="average"> 0.037732</td>
+    </tr>
+    <tr style="border-top: solid 1px #aaa;">
+      <th>Average</th>
+      <td class="average"> 0.052947</td>
+      <td class="average bcity"> 0.058480</td>
+      <td class="average"> 0.056684</td>
+      <td class="average"> 0.038821</td>
+      <td class="average"> 0.051125</td>
+      <td class="average"> 0.051612</td>
+    </tr>
+  </tbody>
+</table>
+<p>There is no ground truth for:</p>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+City
+</th>
+      <th>
+District
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> 
+New York
+</td>
+      <td> 
+pigalle
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="barcelona">Querying from Barcelona</h2>
+<p>No result for:</p>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+City
+</th>
+      <th>
+District
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>        
+Berlin
+</td>
+      <td>  
+marais
+</td>
+    </tr>
+    <tr>
+      <td>        
+Berlin
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td>      
+New York
+</td>
+      <td>  
+marais
+</td>
+    </tr>
+    <tr>
+      <td>      
+New York
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td>         
+Paris
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td>          
+Rome
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td> 
+San Francisco
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="overall-score">Overall score</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+Metric
+</th>
+      <th>
+Score
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> 
+emd-lmnn
+</td>
+      <td> 
+0.084204
+</td>
+    </tr>
+    <tr>
+      <td>  
+cluster
+</td>
+      <td> 
+0.083064
+</td>
+    </tr>
+    <tr>
+      <td> 
+leftover
+</td>
+      <td> 
+0.078244
+</td>
+    </tr>
+    <tr>
+      <td>      
+emd
+</td>
+      <td> 
+0.078173
+</td>
+    </tr>
+    <tr>
+      <td>      
+jsd
+</td>
+      <td> 
+0.042414
+</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="score-by-city">Score by city</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+emd-lmnn
+</th>
+      <th>
+cluster
+</th>
+      <th>
+leftover
+</th>
+      <th>
+emd
+</th>
+      <th>
+jsd
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+Rome
+</th>
+      <td> 
+0.120647
+</td>
+      <td> 
+0.138873
+</td>
+      <td> 
+0.121402
+</td>
+      <td> 
+0.123980
+</td>
+      <td> 
+0.037375
+</td>
+    </tr>
+    <tr>
+      <th>
+New York
+</th>
+      <td> 
+0.098321
+</td>
+      <td> 
+0.091997
+</td>
+      <td> 
+0.065448
+</td>
+      <td> 
+0.098321
+</td>
+      <td> 
+0.067563
+</td>
+    </tr>
+    <tr>
+      <th>
+Paris
+</th>
+      <td> 
+0.097693
+</td>
+      <td> 
+0.073081
+</td>
+      <td> 
+0.066496
+</td>
+      <td> 
+0.077866
+</td>
+      <td> 
+0.021837
+</td>
+    </tr>
+    <tr>
+      <th>
+San Francisco
+</th>
+      <td> 
+0.080636
+</td>
+      <td> 
+0.048622
+</td>
+      <td> 
+0.078485
+</td>
+      <td> 
+0.073940
+</td>
+      <td> 
+0.053776
+</td>
+    </tr>
+    <tr>
+      <th>
+Washington
+</th>
+      <td> 
+0.048977
+</td>
+      <td> 
+0.079008
+</td>
+      <td> 
+0.068108
+</td>
+      <td> 
+0.032961
+</td>
+      <td> 
+0.058692
+</td>
+    </tr>
+    <tr>
+      <th>
+Berlin
+</th>
+      <td> 
+0.059448
+</td>
+      <td> 
+0.067068
+</td>
+      <td> 
+0.063809
+</td>
+      <td> 
+0.065983
+</td>
+      <td> 
+0.019095
+</td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="metrics_from_barcelona.png"></p>
+<h2 id="newyork">Querying from New York</h2>
+<p>No result for:</p>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+City
+</th>
+      <th>
+District
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>     
+Barcelona
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>        
+Berlin
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>         
+Paris
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>          
+Rome
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td> 
+San Francisco
+</td>
+      <td>   
+official
+</td>
+    </tr>
+    <tr>
+      <td> 
+San Francisco
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td>      
+latin
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td>     
+marais
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td> 
+montmartre
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td>   
+official
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="overall-score-1">Overall score</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+Metric
+</th>
+      <th>
+Score
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>      
+emd
+</td>
+      <td> 
+0.059385
+</td>
+    </tr>
+    <tr>
+      <td>  
+cluster
+</td>
+      <td> 
+0.059200
+</td>
+    </tr>
+    <tr>
+      <td> 
+emd-lmnn
+</td>
+      <td> 
+0.059023
+</td>
+    </tr>
+    <tr>
+      <td>      
+jsd
+</td>
+      <td> 
+0.057180
+</td>
+    </tr>
+    <tr>
+      <td> 
+leftover
+</td>
+      <td> 
+0.053495
+</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="score-by-city-1">Score by city</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+emd
+</th>
+      <th>
+cluster
+</th>
+      <th>
+emd-lmnn
+</th>
+      <th>
+jsd
+</th>
+      <th>
+leftover
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+San Francisco
+</th>
+      <td> 
+0.126369
+</td>
+      <td> 
+0.145600
+</td>
+      <td> 
+0.126278
+</td>
+      <td> 
+0.063539
+</td>
+      <td> 
+0.128941
+</td>
+    </tr>
+    <tr>
+      <th>
+Rome
+</th>
+      <td> 
+0.090368
+</td>
+      <td> 
+0.066078
+</td>
+      <td> 
+0.084730
+</td>
+      <td> 
+0.082051
+</td>
+      <td> 
+0.098519
+</td>
+    </tr>
+    <tr>
+      <th>
+Berlin
+</th>
+      <td> 
+0.075346
+</td>
+      <td> 
+0.032208
+</td>
+      <td> 
+0.074106
+</td>
+      <td> 
+0.054325
+</td>
+      <td> 
+0.049140
+</td>
+    </tr>
+    <tr>
+      <th>
+Barcelona
+</th>
+      <td> 
+0.033995
+</td>
+      <td> 
+0.057864
+</td>
+      <td> 
+0.038493
+</td>
+      <td> 
+0.036952
+</td>
+      <td> 
+0.018722
+</td>
+    </tr>
+    <tr>
+      <th>
+Paris
+</th>
+      <td> 
+0.005866
+</td>
+      <td> 
+0.031963
+</td>
+      <td> 
+0.006410
+</td>
+      <td> 
+0.064603
+</td>
+      <td> 
+0.005856
+</td>
+    </tr>
+    <tr>
+      <th>
+Washington
+</th>
+      <td> 
+0.000000
+</td>
+      <td> 
+0.000000
+</td>
+      <td> 
+0.000000
+</td>
+      <td> 
+0.022969
+</td>
+      <td> 
+0.000000
+</td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="metrics_from_newyork.png"></p>
+<h2 id="paris">Querying from Paris</h2>
+
+<h3 id="overall-score-2">Overall score</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+Metric
+</th>
+      <th>
+Score
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>      
+emd
+</td>
+      <td> 
+0.091178
+</td>
+    </tr>
+    <tr>
+      <td> 
+emd-lmnn
+</td>
+      <td> 
+0.078614
+</td>
+    </tr>
+    <tr>
+      <td> 
+leftover
+</td>
+      <td> 
+0.061940
+</td>
+    </tr>
+    <tr>
+      <td>  
+cluster
+</td>
+      <td> 
+0.061438
+</td>
+    </tr>
+    <tr>
+      <td>      
+jsd
+</td>
+      <td> 
+0.045136
+</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="score-by-city-2">Score by city</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+emd
+</th>
+      <th>
+emd-lmnn
+</th>
+      <th>
+leftover
+</th>
+      <th>
+cluster
+</th>
+      <th>
+jsd
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+Barcelona
+</th>
+      <td> 
+0.202047
+</td>
+      <td> 
+0.153575
+</td>
+      <td> 
+0.134733
+</td>
+      <td> 
+0.109313
+</td>
+      <td> 
+0.092075
+</td>
+    </tr>
+    <tr>
+      <th>
+Washington
+</th>
+      <td> 
+0.080091
+</td>
+      <td> 
+0.079933
+</td>
+      <td> 
+0.079736
+</td>
+      <td> 
+0.076816
+</td>
+      <td> 
+0.042451
+</td>
+    </tr>
+    <tr>
+      <th>
+San Francisco
+</th>
+      <td> 
+0.103807
+</td>
+      <td> 
+0.095084
+</td>
+      <td> 
+0.058754
+</td>
+      <td> 
+0.061841
+</td>
+      <td> 
+0.034531
+</td>
+    </tr>
+    <tr>
+      <th>
+Rome
+</th>
+      <td> 
+0.097793
+</td>
+      <td> 
+0.069156
+</td>
+      <td> 
+0.050231
+</td>
+      <td> 
+0.053990
+</td>
+      <td> 
+0.047691
+</td>
+    </tr>
+    <tr>
+      <th>
+Berlin
+</th>
+      <td> 
+0.024730
+</td>
+      <td> 
+0.036906
+</td>
+      <td> 
+0.025739
+</td>
+      <td> 
+0.038122
+</td>
+      <td> 
+0.019972
+</td>
+    </tr>
+    <tr>
+      <th>
+New York
+</th>
+      <td> 
+0.031089
+</td>
+      <td> 
+0.031089
+</td>
+      <td> 
+0.016808
+</td>
+      <td> 
+0.023849
+</td>
+      <td> 
+0.032521
+</td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="metrics_from_paris.png"></p>
+<h2 id="rome">Querying from Rome</h2>
+
+<p>No result for:</p>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+City
+</th>
+      <th>
+District
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>     
+Barcelona
+</td>
+      <td>     
+marais
+</td>
+    </tr>
+    <tr>
+      <td>     
+Barcelona
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>        
+Berlin
+</td>
+      <td>     
+marais
+</td>
+    </tr>
+    <tr>
+      <td>        
+Berlin
+</td>
+      <td> 
+montmartre
+</td>
+    </tr>
+    <tr>
+      <td>        
+Berlin
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>        
+Berlin
+</td>
+      <td>   
+triangle
+</td>
+    </tr>
+    <tr>
+      <td>      
+New York
+</td>
+      <td>     
+marais
+</td>
+    </tr>
+    <tr>
+      <td>      
+New York
+</td>
+      <td> 
+montmartre
+</td>
+    </tr>
+    <tr>
+      <td>      
+New York
+</td>
+      <td>   
+triangle
+</td>
+    </tr>
+    <tr>
+      <td>         
+Paris
+</td>
+      <td>     
+marais
+</td>
+    </tr>
+    <tr>
+      <td>         
+Paris
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>         
+Paris
+</td>
+      <td>   
+triangle
+</td>
+    </tr>
+    <tr>
+      <td> 
+San Francisco
+</td>
+      <td>     
+marais
+</td>
+    </tr>
+    <tr>
+      <td> 
+San Francisco
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td>     
+marais
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td>    
+pigalle
+</td>
+    </tr>
+    <tr>
+      <td>    
+Washington
+</td>
+      <td>   
+triangle
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="overall-score-3">Overall score</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+Metric
+</th>
+      <th>
+Score
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>      
+emd
+</td>
+      <td> 
+0.042352
+</td>
+    </tr>
+    <tr>
+      <td> 
+emd-lmnn
+</td>
+      <td> 
+0.039936
+</td>
+    </tr>
+    <tr>
+      <td> 
+leftover
+</td>
+      <td> 
+0.029746
+</td>
+    </tr>
+    <tr>
+      <td>  
+cluster
+</td>
+      <td> 
+0.024313
+</td>
+    </tr>
+    <tr>
+      <td>      
+jsd
+</td>
+      <td> 
+0.021156
+</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="score-by-city-3">Score by city</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+emd
+</th>
+      <th>
+emd-lmnn
+</th>
+      <th>
+leftover
+</th>
+      <th>
+cluster
+</th>
+      <th>
+jsd
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+Barcelona
+</th>
+      <td> 
+0.110493
+</td>
+      <td> 
+0.120039
+</td>
+      <td> 
+0.102982
+</td>
+      <td> 
+0.055610
+</td>
+      <td> 
+0.016434
+</td>
+    </tr>
+    <tr>
+      <th>
+Washington
+</th>
+      <td> 
+0.057706
+</td>
+      <td> 
+0.027540
+</td>
+      <td> 
+0.027541
+</td>
+      <td> 
+0.057703
+</td>
+      <td> 
+0.093309
+</td>
+    </tr>
+    <tr>
+      <th>
+New York
+</th>
+      <td> 
+0.072873
+</td>
+      <td> 
+0.072873
+</td>
+      <td> 
+0.026205
+</td>
+      <td> 
+0.012527
+</td>
+      <td> 
+0.000060
+</td>
+    </tr>
+    <tr>
+      <th>
+San Francisco
+</th>
+      <td> 
+0.003903
+</td>
+      <td> 
+0.003963
+</td>
+      <td> 
+0.002393
+</td>
+      <td> 
+0.002586
+</td>
+      <td> 
+0.007706
+</td>
+    </tr>
+    <tr>
+      <th>
+Paris
+</th>
+      <td> 
+0.000126
+</td>
+      <td> 
+0.004267
+</td>
+      <td> 
+0.000126
+</td>
+      <td> 
+0.005970
+</td>
+      <td> 
+0.004470
+</td>
+    </tr>
+    <tr>
+      <th>
+Berlin
+</th>
+      <td> 
+0.000887
+</td>
+      <td> 
+0.000887
+</td>
+      <td> 
+0.004243
+</td>
+      <td> 
+0.002932
+</td>
+      <td> 
+0.000172
+</td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="metrics_from_rome.png"></p>
+<h2 id="sanfrancisco">Querying from San Francisco</h2>
+
+<p>No result for:</p>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+City
+</th>
+      <th>
+District
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>  
+Barcelona
+</td>
+      <td> 
+latin
+</td>
+    </tr>
+    <tr>
+      <td>     
+Berlin
+</td>
+      <td> 
+latin
+</td>
+    </tr>
+    <tr>
+      <td>   
+New York
+</td>
+      <td> 
+latin
+</td>
+    </tr>
+    <tr>
+      <td>      
+Paris
+</td>
+      <td> 
+latin
+</td>
+    </tr>
+    <tr>
+      <td>       
+Rome
+</td>
+      <td> 
+latin
+</td>
+    </tr>
+    <tr>
+      <td> 
+Washington
+</td>
+      <td> 
+latin
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="overall-score-4">Overall score</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+Metric
+</th>
+      <th>
+Score
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>  
+cluster
+</td>
+      <td> 
+0.045977
+</td>
+    </tr>
+    <tr>
+      <td>      
+emd
+</td>
+      <td> 
+0.045031
+</td>
+    </tr>
+    <tr>
+      <td> 
+leftover
+</td>
+      <td> 
+0.044497
+</td>
+    </tr>
+    <tr>
+      <td> 
+emd-lmnn
+</td>
+      <td> 
+0.040164
+</td>
+    </tr>
+    <tr>
+      <td>      
+jsd
+</td>
+      <td> 
+0.033829
+</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="score-by-city-4">Score by city</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+cluster
+</th>
+      <th>
+emd
+</th>
+      <th>
+leftover
+</th>
+      <th>
+emd-lmnn
+</th>
+      <th>
+jsd
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+New York
+</th>
+      <td> 
+0.049102
+</td>
+      <td> 
+0.076851
+</td>
+      <td> 
+0.055471
+</td>
+      <td> 
+0.076851
+</td>
+      <td> 
+0.048182
+</td>
+    </tr>
+    <tr>
+      <th>
+Rome
+</th>
+      <td> 
+0.046079
+</td>
+      <td> 
+0.064721
+</td>
+      <td> 
+0.064271
+</td>
+      <td> 
+0.068373
+</td>
+      <td> 
+0.035946
+</td>
+    </tr>
+    <tr>
+      <th>
+Barcelona
+</th>
+      <td> 
+0.024098
+</td>
+      <td> 
+0.067732
+</td>
+      <td> 
+0.063309
+</td>
+      <td> 
+0.036572
+</td>
+      <td> 
+0.085802
+</td>
+    </tr>
+    <tr>
+      <th>
+Berlin
+</th>
+      <td> 
+0.045297
+</td>
+      <td> 
+0.044437
+</td>
+      <td> 
+0.041723
+</td>
+      <td> 
+0.043173
+</td>
+      <td> 
+0.000099
+</td>
+    </tr>
+    <tr>
+      <th>
+Paris
+</th>
+      <td> 
+0.079677
+</td>
+      <td> 
+0.017290
+</td>
+      <td> 
+0.018602
+</td>
+      <td> 
+0.017554
+</td>
+      <td> 
+0.034996
+</td>
+    </tr>
+    <tr>
+      <th>
+Washington
+</th>
+      <td> 
+0.032055
+</td>
+      <td> 
+0.003700
+</td>
+      <td> 
+0.025172
+</td>
+      <td> 
+0.003700
+</td>
+      <td> 
+0.000000
+</td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="metrics_from_sanfrancisco.png"></p>
+<h2 id="washington">Querying from Washington</h2>
+
+<p>No result for:</p>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+City
+</th>
+      <th>
+District
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>     
+Barcelona
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td>        
+Berlin
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td>      
+New York
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td>         
+Paris
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td>          
+Rome
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+    <tr>
+      <td> 
+San Francisco
+</td>
+      <td> 
+weekend
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="overall-score-5">Overall score</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th>
+Metric
+</th>
+      <th>
+Score
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>  
+cluster
+</td>
+      <td> 
+0.043694
+</td>
+    </tr>
+    <tr>
+      <td> 
+leftover
+</td>
+      <td> 
+0.038829
+</td>
+    </tr>
+    <tr>
+      <td> 
+emd-lmnn
+</td>
+      <td> 
+0.038164
+</td>
+    </tr>
+    <tr>
+      <td>      
+emd
+</td>
+      <td> 
+0.034762
+</td>
+    </tr>
+    <tr>
+      <td>      
+jsd
+</td>
+      <td> 
+0.033211
+</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="score-by-city-5">Score by city</h3>
+<table  class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+cluster
+</th>
+      <th>
+leftover
+</th>
+      <th>
+emd-lmnn
+</th>
+      <th>
+emd
+</th>
+      <th>
+jsd
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+Barcelona
+</th>
+      <td> 
+0.119798
+</td>
+      <td> 
+0.112192
+</td>
+      <td> 
+0.088895
+</td>
+      <td> 
+0.089597
+</td>
+      <td> 
+0.048779
+</td>
+    </tr>
+    <tr>
+      <th>
+Rome
+</th>
+      <td> 
+0.023359
+</td>
+      <td> 
+0.038487
+</td>
+      <td> 
+0.084827
+</td>
+      <td> 
+0.051180
+</td>
+      <td> 
+0.059552
+</td>
+    </tr>
+    <tr>
+      <th>
+San Francisco
+</th>
+      <td> 
+0.061379
+</td>
+      <td> 
+0.055273
+</td>
+      <td> 
+0.020823
+</td>
+      <td> 
+0.046882
+</td>
+      <td> 
+0.015043
+</td>
+    </tr>
+    <tr>
+      <th>
+Berlin
+</th>
+      <td> 
+0.031033
+</td>
+      <td> 
+0.006713
+</td>
+      <td> 
+0.010759
+</td>
+      <td> 
+0.003339
+</td>
+      <td> 
+0.038363
+</td>
+    </tr>
+    <tr>
+      <th>
+New York
+</th>
+      <td> 
+0.017152
+</td>
+      <td> 
+0.007405
+</td>
+      <td> 
+0.008200
+</td>
+      <td> 
+0.003113
+</td>
+      <td> 
+0.019809
+</td>
+    </tr>
+    <tr>
+      <th>
+Paris
+</th>
+      <td> 
+0.005651
+</td>
+      <td> 
+0.008413
+</td>
+      <td> 
+0.011202
+</td>
+      <td> 
+0.009940
+</td>
+      <td> 
+0.015807
+</td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="metrics_from_washington.png"></p>
+</body>
+</html>
