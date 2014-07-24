@@ -1,5 +1,6 @@
 var NAMES = {'wallstreet': 'Wall Street, New-York',
     'soho': 'Soho, London',
+    'kensington': 'Kensington, London',
     'mission': 'Mission, San Francisco'};
 var GOLD = new L.FeatureGroup();
 var world_bbox = [[60.242, -122.531], [60.242, 37.848], [29.577, 37.848], [29.577, -122.531]];
@@ -40,6 +41,7 @@ $(function() {
 		var infos = {
 			87: 'wallstreet', // W all Street
 			77: 'mission', // M ission
+			75: 'kensington', // K ensington
 			83: 'soho', // S oho
 		};
 		var district = infos[event.keyCode];
